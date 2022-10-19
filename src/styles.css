@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: rgb(248, 244, 244);
+}
+
+@font-face {
+  font-family: light;
+  src: url(./assets/gilroy-bold-cufonfonts/Gilroy-Light.ttf);
+}
+@font-face {
+  font-family: heavy;
+  src: url(./assets/gilroy-bold-cufonfonts/Gilroy-Heavy.ttf);
+}
+@font-face {
+  font-family: bold;
+  src: url(./assets/gilroy-bold-cufonfonts/Gilroy-Bold.ttf);
+}
+@font-face {
+  font-family: regular;
+  src: url(./assets/gilroy-bold-cufonfonts/Gilroy-Regular.ttf);
+} 
+@font-face {
+  font-family: medium;
+  src: url(./assets/gilroy-bold-cufonfonts/Gilroy-Medium.ttf);
+}

@@ -1,0 +1,52 @@
+
+.carausel-dat{
+    height: 300px !important;
+}
+.img-carousal-data{
+    height: 200px !important;
+    width: 200px !important;
+    width: 100%;
+    object-fit: cover;
+}
+.big-carousal-data{
+    height: 52vh !important;
+}
+.carousal-small-data{
+    font-size: 0.9rem;
+    font-family: bold;
+    color: #3E9342;
+}
+.carousal-small-data-head{
+    font-family: medium;
+}
+.user-card-data-size{
+    height: 250px;
+    width: 100% !important;
+    object-fit: cover;
+}
+.card-main-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+}
+.card-tail-data{
+    width: 300px;
+}
+.data-value{
+    height: 28px;
+    width: 240px;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: medium;
+}
+.data-value-head{
+    font-family:bold ;
+}
+.home-product-price{
+    font-size: 1.2rem;
+    font-family: medium;
+}

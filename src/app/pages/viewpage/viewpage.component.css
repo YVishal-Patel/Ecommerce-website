@@ -1,0 +1,58 @@
+.rowdata{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 6rem;
+}
+.viewpage-img-data{
+    width: 500px;
+    height: 400px;
+}
+.name-type1{
+    font-size: 1.5rem;
+    font-family: bold;
+    margin: 1rem 0;
+}
+.price1{
+    font-size: 1.2rem;
+    font-family: medium;
+}
+.description-type1{
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+    font-family: medium;
+}
+.description-type2{
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    font-family: medium;   
+    width: 300px;
+    color: darkgrey;
+}
+.wishlist-btn{
+    margin-top: 1rem;
+}
+.rounded-none{
+    background-color: rgb(13, 144, 187);
+    color: #fff;
+    width: 150px;
+    font-size: 1rem;
+    font-family: medium;
+}
+.rounded-none:hover{
+    background-color: #fff;
+    color:rgb(13, 144, 187);
+    transition: 0.6s;
+}
+.wishlist-data-btn, .wishlist-data-btn1{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(13, 144, 187);
+    color: #fff;
+    margin-top: 1rem;
+    /* padding: 0.8rem; */
+    font-family: medium;
+}
+.wishlist-data-btn:hover{
+    color:rgb(13, 144, 187);
+    background-color: lightgrey;
+}

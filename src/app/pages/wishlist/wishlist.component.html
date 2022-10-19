@@ -1,0 +1,48 @@
+<div class="container-fluid wish-div-main-bg-container">
+  <div class="container wishlist-main-container">
+    <div class="wishlist-body">
+      <div class="wishlist-heading">
+        <span class="wish-heading"> My Wishlist</span>
+      </div>
+      <div class="main-wish-container">
+        <div
+          *ngFor="let arr of product"
+          class="row main-wish-container-row flex justify-between"
+        >
+          <div class="col-2 wish-images">
+            <img
+              src="{{ arr.images[0] }}"
+              alt=" not found"
+              class="wishlist-img"
+              width="120px"
+              height="120px"
+            />
+          </div>
+          <div class="col-8 wish-data">
+            <span class="wishlist-data">{{ arr.title }}</span>
+
+            <br />
+            <span class="rating-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+              <span class="rating-value-wish"> 4.7</span>
+            </span>
+            <br />
+            <span class="wish-description">{{ arr.description }}</span>
+            <br />
+            <div class="wish-price">{{ arr.price | currency: "INR" }}</div>
+          </div>
+          <div class="col-2 wish-operation">
+            <i (click)="removeWishlist(arr)" class="fa-solid fa-trash"></i>
+            <button (click)="AddToCart(arr)" class="btn-to-cart">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

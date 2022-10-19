@@ -1,0 +1,53 @@
+<p class="text-center" *ngIf='!singleData'><i class="fa-solid fa-spinner"></i> </p>
+<div class="container-fluid main-div-view">
+  <div class="container">
+    <div class="rowdata mt-4">
+      <div id="viewpage-data" class="viewpage-main-container mt-5">
+        <div class="data-type">
+          <div class="name-type">
+            <span class="name-type1"> {{ singleData.title }} </span>
+          </div>
+          <div class="price">
+            <span class="price1">
+              {{ singleData.price | currency: "INR" }}
+            </span>
+          </div>
+          <div class="size-type"></div>
+          <div class="description-type">
+            <p class="description-type1">Description</p>
+            <span class="description-type2">{{ singleData.description }}</span>
+          </div>
+        </div>
+      </div>
+      <div id="viewpage-img" class="col-12 col-md-5 col-sm-12 view-types-data">
+        <div class="img-type">
+          <img
+            src="{{ singleData.images[0] }}"
+            alt="not found"
+            class="viewpage-img-data"
+          />
+        </div>
+
+        <div
+          class="multiImg-viewpage my-5 d-flex justify-content-start flex-wrap"
+        ></div>
+
+        <div class="btns flex justify-content-between my-4">
+          <div class="wishlist-btn rounded-none bg-primary">
+            <button (click)="cartPage()" class="rounded-none p-2 bg-primary">
+              Go to Cart
+            </button>
+          </div>
+
+          <div (click)="AddToCart()"  class="wishlist-btn mx-5 rounded-none bg-primary">
+            <button class="rounded-none p-2 bg-primary" [disabled]="clicked">Add to Cart</button>
+          </div>
+          <button *ngIf="click;  gotoWishlist" class="wishlist-data-btn" (click)="wishlistData()" >Add To Wishlist</button>
+            <div #gotoWishlist>
+            <button *ngIf="!click" class="wishlist-data-btn1" (click)="wishlistPage()">Go to Wishlist</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

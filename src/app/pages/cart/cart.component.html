@@ -1,0 +1,119 @@
+<div class="container cart-body-main-container">
+  <div class="card-body">
+    <div class="card-heading">
+      <div class="card-head">
+        <span class="check-head">Checkout</span>
+      </div>
+    </div>
+
+    <div class="container data-table">
+      <div class="row mt-3 cart-data-division">
+        <div class="col-8 table-data">
+          <div
+            *ngFor="let arr of product"
+            class="row flex cart-user-data mt-3 mb-3"
+          >
+            <div class="col-2">
+              <div class="table-img">
+                <img
+                  src="{{ arr?.images[0] }}"
+                  class="table-img-data"
+                  width="110px"
+                  height="110px"
+                  alt="not found"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="item-name">
+                <span class="item-ProductName">{{ arr?.title }}</span>
+                <div class="item-description">{{ arr?.description }}</div>
+              </div>
+            </div>
+            <div class="quantity-card col-2 mt-n5">
+              <div class="quantity-card">
+                <button class="btn-value">+</button>
+                <input class="quantity-value" value="{{ arr.rating }}" />
+                <button class="btn-value">-</button>
+              </div>
+            </div>
+            <div class="col-2 item-price d-flex flex-column mt-n5">
+              <div class="item-ProductPrice">
+                {{ arr.price | currency: "INR" }}
+              </div>
+              <span (click)="deleteItem(arr)">
+                <i class="fa-solid fa-trash-can"></i
+              ></span>
+            </div>
+            <div class="flex flex-col">
+            <!-- <button *ngIf="clicked;  gotoWishlist" class="wishlist-data-btn" (click)="wishlistData(arr)" >Add To Wishlist</button>
+            <div #gotoWishlist>
+            <button *ngIf="!clicked" class="wishlist-data-btn1" (click)="wishlistPage()">Go to Wishlist</button>
+        </div> -->
+        </div>
+          </div>
+        </div>
+
+        <div class="col-4 card-sidebar">
+          <div class="total-value d-flex">
+            <p class="price-heading m-3">Price Details</p>
+          </div>
+          <div class="price-data flex justify-between m-3">
+            <span>Price</span>
+            <span>{{ totalProductPrice | currency: "INR" }}</span>
+          </div>
+          <div class="discount flex justify-between m-3">
+            <span>Discount</span>
+            <span class="delivery-type">{{ discount | currency: "INR" }}</span>
+          </div>
+          <div class="delivery-charge flex justify-between m-3">
+            <span>Delivery Charge</span>
+            <span class="delivery-type">Free</span>
+          </div>
+          <div class="total-amount flex justify-between m-3">
+            <span>Total Charge</span>
+            <span>{{ totalAfterDiscount | currency: "INR" }}</span>
+          </div>
+          <br />
+          <button class="w-100 checkout">
+            checkout <i class="fa-solid fa-right-long arrow1"></i>
+          </button>
+          <hr class="mt-4" />
+          <div class="security mt-4 flex justify-center">
+            <i class="fa-solid fa-lock"></i>
+            <p class="upper-data">
+              <span class="secured-des"> Secured by Snipcard</span>
+            </p>
+          </div>
+          <div class="card-type justify-between flex">
+            <img
+              class="last-img"
+              src="../../../assets/visa.png"
+              alt="not found"
+            />
+            <img
+              class="last-img"
+              src="../../../assets/mastercard.png"
+              alt="not found"
+            />
+            <img
+              class="last-img"
+              src="../../../assets/paypal.png"
+              alt="not found"
+            />
+            <img
+              class="last-img"
+              src="../../../assets/Rupay.png"
+              alt="not found"
+            />
+            <img
+              class="last-img"
+              src="../../../assets/paytm.png"
+              alt="not found"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
