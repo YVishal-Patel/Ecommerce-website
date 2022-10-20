@@ -89,17 +89,6 @@ body{
     flex: 0 0 63%;
 	max-width: 33.5%;
 }
-
-.card-sidebar1{
-    padding-bottom:3% ;
-    margin-left: 2.2rem;
-    height: fit-content;
-    background-color: white;
-    box-shadow: 0px 5px 7px rgba(0,0,0,0.2);
-    flex: 0 0 63%;
-	max-width: 25.5% !important;
-}
-
 .small-screen-cart-container{
     display: none;
 }

@@ -29,7 +29,8 @@
     color: darkgrey;
 }
 .wishlist-btn{
-    margin-top: 1rem;
+    margin-top: 0 1rem;
+    height: 50px;
 }
 .rounded-none{
     background-color: rgb(13, 144, 187);
@@ -48,11 +49,17 @@
     height: 50px;
     background-color: rgb(13, 144, 187);
     color: #fff;
-    margin-top: 1rem;
+    margin: 0 1rem;
     /* padding: 0.8rem; */
     font-family: medium;
 }
 .wishlist-data-btn:hover{
     color:rgb(13, 144, 187);
     background-color: lightgrey;
+    height: 50px;
+    margin: 0 1rem;
+}
+.wishlist-btn2{
+    margin: 0 0.8rem;
+    height: 50px;
 }

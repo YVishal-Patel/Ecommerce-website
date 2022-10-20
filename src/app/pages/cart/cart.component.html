@@ -2,7 +2,7 @@
   <div class="card-body">
     <div class="card-heading">
       <div class="card-head">
-        <span class="check-head">Checkout</span>
+        <span class="check-head">Cart</span>
       </div>
     </div>
 
@@ -13,7 +13,7 @@
             *ngFor="let arr of product"
             class="row flex cart-user-data mt-3 mb-3"
           >
-            <div class="col-2">
+            <div class="col-2 table-image-div">
               <div class="table-img">
                 <img
                   src="{{ arr?.images[0] }}"
@@ -23,6 +23,9 @@
                   alt="not found"
                 />
               </div>
+              <p (click)="confirmBox(arr)" class="deleted_hover_btn_icon">
+                <i class="fa-solid fa-trash trash-can-hover"></i>
+              </p>
             </div>
             <div class="col-6">
               <div class="item-name">
@@ -41,16 +44,10 @@
               <div class="item-ProductPrice">
                 {{ arr.price | currency: "INR" }}
               </div>
-              <span (click)="deleteItem(arr)">
+              <!-- <span (click)="deleteItem(arr)">
                 <i class="fa-solid fa-trash-can"></i
-              ></span>
+              ></span> -->
             </div>
-            <div class="flex flex-col">
-            <!-- <button *ngIf="clicked;  gotoWishlist" class="wishlist-data-btn" (click)="wishlistData(arr)" >Add To Wishlist</button>
-            <div #gotoWishlist>
-            <button *ngIf="!clicked" class="wishlist-data-btn1" (click)="wishlistPage()">Go to Wishlist</button>
-        </div> -->
-        </div>
           </div>
         </div>
 
@@ -75,7 +72,7 @@
             <span>{{ totalAfterDiscount | currency: "INR" }}</span>
           </div>
           <br />
-          <button class="w-100 checkout">
+          <button (click)="cartPage()" class="w-100 checkout">
             checkout <i class="fa-solid fa-right-long arrow1"></i>
           </button>
           <hr class="mt-4" />

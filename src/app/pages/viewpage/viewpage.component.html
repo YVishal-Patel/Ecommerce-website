@@ -33,14 +33,14 @@
         ></div>
 
         <div class="btns flex justify-content-between my-4">
-          <div class="wishlist-btn rounded-none bg-primary">
-            <button (click)="cartPage()" class="rounded-none p-2 bg-primary">
+          <div #goToCart *ngIf="!clicked"  class="wishlist-btn rounded-none bg-primary">
+            <button  (click)="cartPage()" class="rounded-none p-2 bg-primary wishlist-btn2">
               Go to Cart
             </button>
           </div>
 
-          <div (click)="AddToCart()"  class="wishlist-btn mx-5 rounded-none bg-primary">
-            <button class="rounded-none p-2 bg-primary" [disabled]="clicked">Add to Cart</button>
+          <div >
+            <button *ngIf="clicked; goToCart"  (click)="AddToCart()"  class="wishlist-btn rounded-none p-2 bg-primary">Add to Cart</button>
           </div>
           <button *ngIf="click;  gotoWishlist" class="wishlist-data-btn" (click)="wishlistData()" >Add To Wishlist</button>
             <div #gotoWishlist>

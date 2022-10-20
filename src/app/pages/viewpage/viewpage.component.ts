@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class ViewpageComponent implements OnInit {
   id: any;
   singleData: any;
-  clicked = false;
+  clicked = true;
   click = true;
 
   constructor(
@@ -22,7 +22,6 @@ export class ViewpageComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params: any) => {
-      // console.log(params.category)
       this.id = params.category;
     });
     this.userData.singleUserData(this.id).subscribe((data: any) => {
@@ -34,18 +33,20 @@ export class ViewpageComponent implements OnInit {
     this.router.navigateByUrl('cart');
   }
 
-  AddToCart(){
-  this.userData.arr.push(this.singleData)
-  this.clicked = true;
+  AddToCart() {
+    this.userData.arr.push(this.singleData);
+    this.clicked = false;
+    this.userData.userData();
+    console.log(this.userData.arr, 'arr');
+    console.log(this.userData.data, 'userData val');
   }
 
-  wishlistData(){
-    this.userData.wishlistData.push(this.singleData)
+  wishlistData() {
+    this.userData.wishlistData.push(this.singleData);
     this.click = false;
-   }
- 
-   wishlistPage() {
-     this.router.navigateByUrl('/wishlist');
-   }
+  }
 
+  wishlistPage() {
+    this.router.navigateByUrl('/wishlist');
+  }
 }

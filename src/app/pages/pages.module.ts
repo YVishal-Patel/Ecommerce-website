@@ -14,6 +14,8 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { ViewpageComponent } from './viewpage/viewpage.component';
 import { CartComponent } from './cart/cart.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { FormsModule } from '@angular/forms';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +32,9 @@ import { WishlistComponent } from './wishlist/wishlist.component';
     ViewpageComponent,
     CartComponent,
     WishlistComponent,
+    CheckoutComponent,
   ],
-  imports: [CommonModule, IvyCarouselModule],
+  imports: [CommonModule, IvyCarouselModule, FormsModule],
   exports: [
     HomeComponent,
     AboutComponent,

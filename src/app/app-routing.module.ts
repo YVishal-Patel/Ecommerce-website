@@ -13,6 +13,7 @@ import { DressesComponent } from './pages/dresses/dresses.component';
 import { ViewpageComponent } from './pages/viewpage/viewpage.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { WishlistComponent } from './pages/wishlist/wishlist.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'viewpage:id', component: ViewpageComponent },
   { path: 'cart', component: CartComponent },
   { path: 'wishlist', component: WishlistComponent },
+  { path: 'checkout', component: CheckoutComponent },
 ];
 
 @NgModule({
